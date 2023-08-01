@@ -47,10 +47,9 @@ class FirstViewController: UIViewController {
         
     }
     
-    
     //MARK: - Methods
     
-    func setupLabels() {
+   private func setupLabels() {
         labelAnimation.text = "Style - " + randomAnimation.preset.description
         labelCurve.text = "Curve - " + randomAnimation.curve.description
         labelForce.text = "Force - " + randomAnimation.force.description
@@ -58,13 +57,12 @@ class FirstViewController: UIViewController {
         labelDelay.text = "Delay - " + randomAnimation.delay.description
     }
     
-    func setupAnimation() {
+    
+   private func setupAnimation() {
         coloredView.animation = randomAnimation.preset
         coloredView.curve = randomAnimation.curve
         coloredView.force = randomAnimation.force
         coloredView.duration = randomAnimation.duration
         coloredView.delay = randomAnimation.delay
     }
-    
 }
-
