@@ -15,13 +15,13 @@ struct AnimationSettings {
     var duration: Double
     var delay: Double
     
-    func getRandomAnimation() -> AnimationSettings {
+    static func getRandomAnimation() -> AnimationSettings {
         AnimationSettings(
             preset: AnimationsStore().animationsList.randomElement()?.rawValue ?? "flash",
             curve: AnimationsStore().curves.randomElement()?.rawValue ?? "spring",
-            force: Double.random(in: 1...2),
-            duration: Double.random(in: 0.1 ... 1),
-            delay: 0
+            force: Double.random(in: 0.5 ... 1),
+            duration: Double.random(in: 0.3 ... 0.8),
+            delay: Double.random(in: 0.1 ... 0.4)
         )
     }
     
