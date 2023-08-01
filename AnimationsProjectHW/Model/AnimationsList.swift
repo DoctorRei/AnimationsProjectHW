@@ -9,6 +9,7 @@ import SpringAnimation
 
 struct AnimationsStore {
     
+    
     let animationsList: [AnimationPreset] = [
         .pop,
         .slideLeft,
